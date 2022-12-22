@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+header{
+    background-color: #EAC926;
+    padding: 20px;
+}
+header img{
+    padding: 10px;
+}
+.logo-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo-search input{
+    display: flex;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+}
+.box-search{
+    position: relative;
+}
+.box-search i{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.logo-search .fa-search{
+    padding: 10px;
+}
+.header-descripcion{
+    margin: 20px;
+}
+.login{
+    display: none;
+}
+nav{
+    padding: 20px 0;
+    display: none;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    color: black;
+    text-decoration: none;
+}
+main{
+    width: 90%;
+    margin: auto;
+}
+main h1{
+    margin: 10px 0;
+    color: grey;
+}
+main section{
+    display: grid;
+}
+main .contenedor{
+    margin: 10px;
+}
+main .contenedor-body{
+    background-color: white;
+    padding: 15px;
+}
+main .precio_descuento {
+    position: relative;
+}
+main .contenedor-body i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+}
+main .contenedor-body p{
+    margin: 5px 0;
+}
+main .contenedor-body img{
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+}
+main .precio_descuento{
+   display: flex;
+   gap: 0.5em;
+}
+main .descuento{
+    color: #00e700;
+}
+.burger-menu{
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.burger-menu i{
+    background-color: #1259c3;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+footer div {
+    color: grey;
+    text-align: center;
+    padding: 50px;
+}
+footer div h3{
+    color: #666;
+}
+footer div i{
+    color: #1259c3;
+    font-size: 2em;
+    margin: 10px;
+}
+footer .copyright{
+    color:grey;
+    padding: 10px;
+}
+
+                    /* REGISTER */
+
+.formulario{
+    background-color: rgb(207, 207, 207);
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.formulario input{
+    margin: 30px 0px;
+}
+.formulario .input-form{
+    display: flex;
+    padding: 10px 5px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+}
+.formulario button, .formulario button a{
+    color: rgb(0, 0, 0);
+    border: none;
+    text-decoration: none;
+    padding: 10px;
+}
+.form-enviar{
+    background-color: #0042d1;
+    color: white;
+    text-align: center;
+}
+.form-enviar:hover{
+    background-color:#0022AA;
+}
+
+                    /* MEDIA SCREEN */
+
+@media (min-width:361px) {
+    main section{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .contenedor-body:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .contenedor-body i{
+        transition: 1s all;
+    }
+    .contenedor-body i:hover{
+        transform:  rotate(-90deg);
+        transition: 1s all;
+    }
+    .descripcion{
+        display: none;
+    }
+    .contenedor-body:hover .descripcion{
+        display: block;
+    }
+}
+@media (min-width:769px) {
+    header nav, .login{
+        display: block;
+    }
+    main section{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .container-nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav ul{
+        display: flex;
+        gap: 1em;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .login{
+        display:flex;
+        align-items: center;
+        gap: 1em;
+    }
+    header nav, .descripcion{
+        display: block;
+    }
+    main .contenedor-body{
+        box-shadow: none;
+    }
+    footer{
+        display: flex;
+    }
+}
