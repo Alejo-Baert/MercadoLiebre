@@ -169,12 +169,9 @@ footer .copyright{
     background-color: #0042d1;
     display: flex;
     justify-content: center;
-}
-.enviar-login button{
-    background: none;
-    color: white;
-    border: none;
     font-size: 1.1em;
+    color: white;
+    text-decoration: none;
 }
 .enviar-login:hover{
     background-color:#0022AA;
